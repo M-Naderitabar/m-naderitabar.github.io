@@ -19,7 +19,7 @@ My research focuses on the interaction between macroeconomic dynamics, market st
 ## Current projects
 - **Marriage markets and wealth inequality.** A non-unitary, incomplete-market framework with heterogeneous asset returns and Nash bargaining within households.
 - **Tax policy and investment behavior.** Studying how taxation shapes firms’ investment and innovation decisions through WACC and capital structure.
-- **Analyzing Economic Systems.** Developing a structural framework to study interlinked economic mechanisms using dynamic modeling and system identification.
+- **A New Approach to Analyzing Economic Systems.** Developing a structural framework to study interlinked economic mechanisms using dynamic modeling and system identification.
 - **Demand, firm upgrading, and growth.** Exploring how nonhomothetic demand and firm upgrading interact to drive innovation and aggregate productivity.
 
 <!-- ## Methods
