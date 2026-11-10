@@ -1,35 +1,27 @@
 ---
-title: "Welcome to my Website!"
+title: About
+heading: Welcome.
 permalink: /
-layout: single
-author_profile: true
-excerpt: "PhD student in Economics at the Institute for International Economic Studies (IIES), Stockholm University"
+description: Mohammad Naderitabar, PhD candidate in Economics at IIES, Stockholm University. Macroeconomics, industrial organization, innovation, and information economics.
 ---
 
-## Profile
-I am a PhD student in Economics at the Institute for International Economic Studies (IIES), Stockholm University.  
-My research focuses on the interaction between macroeconomic dynamics, market structure, firm behavior, and household decision-making, with applications to growth and wealth inequality.
+<div class="biography" markdown="1">
+I am a PhD candidate in Economics at the [Institute for International Economic Studies (IIES)]({{ site.affiliation.institute_url }}), [Stockholm University]({{ site.affiliation.university_url }}).
 
-## Research interests
-- Macroeconomics of innovation and growth  
-- Industrial organization and competition policy  
-- Heterogeneous-agent macroeconomic models  
-- Family economics: marriage markets and wealth inequality
+My research interests include **macroeconomics, industrial organization, innovation, and information economics**. My current work studies how market structure, innovation incentives, and household behavior shape economic growth and inequality.
+</div>
 
-## Current projects
-- **Marriage markets and wealth inequality.**
-- **Tax policy and investment behavior.**
-- **A New Approach to Analyzing Economic Systems.**
-- **Demand, firm upgrading, and growth.**
+<section class="content-section" aria-labelledby="research-heading">
+  <div class="section-heading">
+    <h2 id="research-heading">Research</h2>
+    <a class="section-link" href="{{ '/research/' | relative_url }}">All research <span aria-hidden="true">→</span></a>
+  </div>
+  {% for paper in site.data.research.papers limit: 1 %}
+    {% include research-paper.html paper=paper %}
+  {% endfor %}
+</section>
 
-<!-- ## Methods
-Dynamic programming, heterogeneous-agent computation, EGM, finite-difference ODEs, system identification, and structural IO tools.  
-Coding in Python, MATLAB, and R. -->
-
-## Teaching
-- **Math II (Graduate, Stockholm University).** Teaching assistant for Professors Tessa Bold and Paul Klein.  
-- **Macroeconomics I (Graduate, Stockholm University).** Teaching assistant for Professors Timo Boppart and Lars Ljungqvist. 
-
-## Contact
-- Email: mohammad.naderitabar@iies.su.se  
-- GitHub: https://github.com/M-Naderitabar
+<section class="content-section contact-section" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Get in touch</h2>
+  <p>I am based at IIES, Stockholm University. You can reach me at <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
+</section>

@@ -1,0 +1,52 @@
+# Papers appear in this order; the first is featured on the homepage.
+# Fill in summary or abstract to replace the description placeholder.
+papers:
+  - title: Measuring the Cost of Living through Development
+    coauthors:
+      - name: Mehdi Amani
+        url: https://www.mehdiamani.com/
+    status: Work in progress
+    summary:
+    abstract:
+    paper_url:
+    slides_url:
+
+  - title: Information-Induced Markups
+    coauthors:
+      - name: Jonas Overhage
+        url: https://joverhage.github.io/
+      - name: Jacob Granqvist
+        url: https://jacobgra.github.io/
+    status: Work in progress
+    summary:
+    abstract:
+    paper_url:
+    slides_url:
+
+  - title: Marriage Market and Wealth Inequality
+    coauthors:
+      - name: Ehsan Sabouri Kenari
+        url: https://sites.google.com/view/sabourikenari/
+    status: Work in progress
+    summary:
+    abstract:
+    paper_url:
+    slides_url:
+
+  - title: Oil Price Volatility and the Asymmetric Transmission of Energy Shocks
+    coauthors:
+      - name: Alireza Azampour
+        url: https://arazampour.com/
+    status: Working paper
+    # Paraphrased from https://arazampour.com/#jmp.
+    summary: >-
+      We study why oil price increases reduce investment more than price declines
+      stimulate it, and why this asymmetry grows with the size of the shock.
+      Evidence from oil-supply shocks in the EU links this investment response to
+      greater dispersion in energy prices. In a model with firms that differ in
+      energy intensity, price dispersion increases uncertainty about returns and
+      discourages investment, amplifying contractions after price increases and
+      dampening expansions after price declines.
+    abstract:
+    paper_url: https://arazampour.com/files/jmp.pdf
+    slides_url: https://arazampour.com/files/jmp-slides.pdf

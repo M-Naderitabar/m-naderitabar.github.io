@@ -1,0 +1,24 @@
+<article class="research-paper">
+  <p class="paper-status">{{ include.paper.status }}</p>
+  <h3>{{ include.paper.title | escape }}</h3>
+  {% if include.paper.coauthors %}
+  <p class="paper-authors">Joint with {% for coauthor in include.paper.coauthors %}<a href="{{ coauthor.url | escape }}">{{ coauthor.name | escape }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+  {% endif %}
+  {% if include.paper.summary %}
+  <p class="paper-summary">{{ include.paper.summary | escape }}</p>
+  {% elsif include.paper.abstract == nil or include.paper.abstract == empty %}
+  <p class="paper-placeholder">Description forthcoming.</p>
+  {% endif %}
+  {% if include.paper.abstract %}
+  <details class="paper-abstract">
+    <summary>Abstract</summary>
+    <div>{{ include.paper.abstract | markdownify }}</div>
+  </details>
+  {% endif %}
+  {% if include.paper.paper_url or include.paper.slides_url %}
+  <div class="paper-links">
+    {% if include.paper.paper_url %}<a href="{{ include.paper.paper_url | relative_url }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+    {% if include.paper.slides_url %}<a href="{{ include.paper.slides_url | relative_url }}">Slides <span aria-hidden="true">↗</span></a>{% endif %}
+  </div>
+  {% endif %}
+</article>
