@@ -1,0 +1,13 @@
+courses:
+  - title: Math II
+    level: Graduate
+    institution: Stockholm University
+    role: Teaching assistant
+    instructors: Tessa Bold and Paul Klein
+    materials_url:
+  - title: Macroeconomics I
+    level: Graduate
+    institution: Stockholm University
+    role: Teaching assistant
+    instructors: Timo Boppart and Lars Ljungqvist
+    materials_url:

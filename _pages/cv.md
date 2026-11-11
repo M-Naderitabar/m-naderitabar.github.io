@@ -1,64 +1,34 @@
 ---
-layout: archive
-title: "CV"
+title: Curriculum vitae
 permalink: /cv/
-author_profile: true
+description: Academic background and teaching experience of Mohammad Naderitabar, PhD candidate in Economics at Stockholm University.
 redirect_from:
-  - /resume
+  - /resume/
 ---
 
-{% include base_path %}
+{% if site.cv_pdf %}
+<p class="page-intro"><a class="download-link" href="{{ site.cv_pdf | relative_url }}">Download CV (PDF) <span aria-hidden="true">↓</span></a></p>
+{% else %}
+<p class="page-intro">For a current copy of my CV, please <a href="mailto:{{ site.author.email }}?subject=CV%20request">contact me by email</a>.</p>
+{% endif %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<section class="content-section first-section" aria-labelledby="education-heading">
+  <h2 id="education-heading">Education</h2>
+  <div class="cv-entry">
+    <h3>PhD in Economics</h3>
+    <p>PhD candidate · Stockholm University<br>Institute for International Economic Studies (IIES)</p>
+  </div>
+</section>
+<section class="content-section" aria-labelledby="fields-heading">
+  <h2 id="fields-heading">Research interests</h2>
+  <p>Macroeconomics, industrial organization, innovation, and information economics.</p>
+</section>
+<section class="content-section" aria-labelledby="teaching-heading">
+  <h2 id="teaching-heading">Teaching experience</h2>
+  {% for course in site.data.teaching.courses %}
+  <div class="cv-entry">
+    <h3>{{ course.title }}</h3>
+    <p>{{ course.role }} · {{ course.level }} · {{ course.institution }}<br>Instructors: {{ course.instructors }}</p>
+  </div>
+  {% endfor %}
+</section>

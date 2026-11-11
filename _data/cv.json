@@ -1,0 +1,40 @@
+{
+  "basics": {
+    "name": "Mohammad Naderitabar",
+    "email": "mohammad.naderitabar@iies.su.se",
+    "website": "https://m-naderitabar.github.io",
+    "summary": "PhD candidate in Economics at IIES, Stockholm University",
+    "location": {
+      "city": "Stockholm",
+      "countryCode": "SE"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "M-Naderitabar",
+        "url": "https://github.com/M-Naderitabar"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Stockholm University",
+      "area": "Economics",
+      "studyType": "PhD candidate"
+    }
+  ],
+  "work": [],
+  "publications": [],
+  "teaching": [
+    {
+      "course": "Math II",
+      "institution": "Stockholm University",
+      "role": "Teaching assistant"
+    },
+    {
+      "course": "Macroeconomics I",
+      "institution": "Stockholm University",
+      "role": "Teaching assistant"
+    }
+  ]
+}

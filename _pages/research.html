@@ -1,0 +1,13 @@
+---
+title: Research
+permalink: /research/
+description: Research and ongoing projects by Mohammad Naderitabar in macroeconomics, industrial organization, innovation, and information economics.
+---
+
+<section class="content-section first-section" aria-labelledby="papers-heading">
+  <h2 id="papers-heading">Work in Progress</h2>
+  {% for paper in site.data.research.papers %}
+    {% include research-paper.html paper=paper %}
+  {% endfor %}
+</section>
+<p class="closing-note">For questions about my research, please <a href="mailto:{{ site.author.email }}">get in touch</a>.</p>

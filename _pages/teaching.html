@@ -1,12 +1,21 @@
 ---
-layout: archive
-title: "Teaching"
+title: Teaching
 permalink: /teaching/
-author_profile: true
+description: Graduate teaching experience of Mohammad Naderitabar at Stockholm University.
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<p class="page-intro">I have been a teaching assistant for graduate courses at Stockholm University.</p>
+<section class="content-section first-section" aria-labelledby="courses-heading">
+  <h2 id="courses-heading">Teaching experience</h2>
+  {% for course in site.data.teaching.courses %}
+  <article class="course">
+    <div class="course-heading">
+      <h3>{{ course.title }}</h3>
+      <span class="course-level">{{ course.level }}</span>
+    </div>
+    <p class="course-role">{{ course.role }} · {{ course.institution }}</p>
+    <p>Instructors: {{ course.instructors }}</p>
+    {% if course.materials_url %}<p><a href="{{ course.materials_url | relative_url }}">Course materials <span aria-hidden="true">↗</span></a></p>{% endif %}
+  </article>
+  {% endfor %}
+</section>

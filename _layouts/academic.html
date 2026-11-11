@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="{{ site.locale | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assign page_description = page.description | default: site.description %}
+    <title>{% unless page.url == '/' %}{{ page.title | escape }} | {% endunless %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <meta name="author" content="{{ site.author.name | escape }}">
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:title" content="{% unless page.url == '/' %}{{ page.title | escape }} | {% endunless %}{{ site.title | escape }}">
+    <meta property="og:description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ site.author.avatar | absolute_url }}">
+    <meta property="og:image:alt" content="Portrait of {{ site.author.name | escape }}">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="{{ '/images/monogram.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","name":{{ site.author.name | jsonify }},"url":{{ '/' | absolute_url | jsonify }},"image":{{ site.author.avatar | absolute_url | jsonify }},"jobTitle":{{ site.author.bio | jsonify }},"affiliation":{"@type":"CollegeOrUniversity","name":{{ site.affiliation.university | jsonify }}}}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+        <nav aria-label="Main navigation">
+          {% for item in site.data.navigation.main %}
+          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <div class="site-body">
+      <aside class="profile" aria-label="Profile and contact">
+        <img class="profile-photo" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="244" height="280" fetchpriority="high">
+        <div class="profile-details">
+          <p class="profile-name">{{ site.author.name }}</p>
+          <p class="profile-role">{{ site.author.bio }}</p>
+          <p class="profile-affiliation">
+            <a href="{{ site.affiliation.institute_url }}">{{ site.affiliation.institute }} ({{ site.affiliation.short_name }})</a><br>
+            <a href="{{ site.affiliation.university_url }}">{{ site.affiliation.university }}</a>
+          </p>
+          <p class="profile-location">{{ site.author.location }}</p>
+          <div class="profile-links">
+            <a class="email-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+            <div class="profile-resources">
+              <a href="{{ site.cv_pdf | default: '/cv/' | relative_url }}">Curriculum vitae{% if site.cv_pdf %} (PDF){% endif %} <span aria-hidden="true">↗</span></a>
+              {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>{% endif %}
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="main-content" tabindex="-1">
+        <header class="page-heading">
+          <p class="eyebrow">{{ page.eyebrow | default: 'Economics · IIES, Stockholm University' }}</p>
+          <h1>{{ page.heading | default: page.title }}</h1>
+        </header>
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+      <p>Built with <a href="https://jekyllrb.com/">Jekyll</a> · <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a></p>
+    </footer>
+  </body>
+</html>
